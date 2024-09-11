@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: rgb(100, 100, 100);
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  max-width: 64rem;
+  max-height: 36rem;
+  background-color: brown;
+  border: 0.2rem solid rgb(500, 500, 500);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider-line {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Meme Slider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="slider-line">
+          <div class="slide"><img src="./images/cat.jpg" alt="cat" /></div>
+          <div class="slide">
+            <img src="./images/meerkat.jpg" alt="meerkat" />
+          </div>
+          <div class="slide">
+            <img src="./images/photographer.jpg" alt="photographer" />
+          </div>
+          <div class="slide"><img src="./images/women.jpg" alt="women" /></div>
+        </div>
+        <div class="sidebar">
+          <div class="slider-btn">
+            <input type="radio" name="btn" id="btn1" checked />
+            <input type="radio" name="btn" id="btn2" />
+            <input type="radio" name="btn" id="btn3" />
+            <input type="radio" name="btn" id="btn4" />
+          </div>
+          <div class="text">
+            <label for="btn1" class="button">What we are looking at </label>
+            <label for="btn2" class="button">They are the best team in the world</label>
+            <label for="btn3" class="button">I'm watching you</label>
+            <label for="btn4" class="button">Everything will be fine</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
