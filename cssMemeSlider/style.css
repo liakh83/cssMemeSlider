@@ -7,6 +7,8 @@ body {
   overflow: hidden;
   background-color: rgb(100, 100, 100);
   font-size: 0.62rem;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .wrapper {
@@ -33,11 +35,12 @@ body {
   display: flex;
   width: 400%;
   height: 100%;
+  transition: all 0.5s linear;
 }
 
 .slide {
-  width: 25%;
-  transition: all 0.5s ease-in-out;
+  width: 100%;
+ 
 }
 
 input {
@@ -68,57 +71,53 @@ img {
   margin-left: 1rem;
 }
 
-#btn1:checked ~ .move {
+#btn1:checked ~ .container .slider-line {
   margin-left: 0;
 }
 
-#btn2:checked ~ .move {
-  margin-left: -25%;
+#btn2:checked ~ .container .slider-line {
+  margin-left: -100%;
 }
 
-#btn3:checked ~ .move {
-  margin-left: -50%;
+#btn3:checked ~ .container .slider-line {
+  margin-left: -200%;
 }
 
-#btn4:checked ~ .move {
-  margin-left: -75%;
+#btn4:checked ~ .container .slider-line {
+  margin-left: -300%;
 }
 
 .text {
   color: white;
   font-size: 2rem;
-  
-width: 100%;
+
+  width: 100%;
   height: auto;
   padding: 0.5rem;
 }
-
-
-
 
 .text-content {
   display: flex;
   width: 400%;
   height: 100%;
-  transition: all .5s ease-in-out;
+  transition: all 0.6s linear;
 }
 
 .text-wrapper {
- 
   overflow: hidden;
   width: 25rem;
   height: 3.5rem;
 }
 
-#btn1:checked ~ .text-wrapper .text-content .move {
+#btn1:checked ~ .text-wrapper .text-content {
   margin-left: 0;
 }
 
-#btn2:checked ~ .text-wrapper .text-content .move {
-  transform: translateX(-100%);
+#btn2:checked ~ .text-wrapper .text-content {
+  margin-left: -100%;
 }
 
-#btn3:checked ~ .text-wrapper .text-content .move {
+#btn3:checked ~ .text-wrapper .text-content {
   margin-left: -200%;
 }
 
