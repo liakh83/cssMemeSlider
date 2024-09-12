@@ -5,16 +5,22 @@
 
 body {
   overflow: hidden;
+  background-color: rgb(100, 100, 100);
+  font-size: 0.62rem;
 }
 
 .wrapper {
+  display: flex;
+  max-width: 102.4rem;
+  height: 100dvh;
   background-color: rgb(100, 100, 100);
-  width: 100vw;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }
 
 .container {
-  max-width: 64rem;
+  max-width: 54rem;
   max-height: 36rem;
   background-color: brown;
   border: 0.2rem solid rgb(500, 500, 500);
@@ -29,8 +35,93 @@ body {
   height: 100%;
 }
 
+.slide {
+  width: 25%;
+  transition: all 0.5s ease-in-out;
+}
+
+input {
+  width: 0;
+}
+
 img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sidebar {
+  display: flex;
+  width: 10rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+}
+
+.button {
+  height: 1rem;
+  border-radius: 100%;
+  width: 1rem;
+  border: 0.1rem solid white;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+#btn1:checked ~ .move {
+  margin-left: 0;
+}
+
+#btn2:checked ~ .move {
+  margin-left: -25%;
+}
+
+#btn3:checked ~ .move {
+  margin-left: -50%;
+}
+
+#btn4:checked ~ .move {
+  margin-left: -75%;
+}
+
+.text {
+  color: white;
+  font-size: 2rem;
+  
+width: 100%;
+  height: auto;
+  padding: 0.5rem;
+}
+
+
+
+
+.text-content {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: all .5s ease-in-out;
+}
+
+.text-wrapper {
+ 
+  overflow: hidden;
+  width: 25rem;
+  height: 3.5rem;
+}
+
+#btn1:checked ~ .text-wrapper .text-content .move {
+  margin-left: 0;
+}
+
+#btn2:checked ~ .text-wrapper .text-content .move {
+  transform: translateX(-100%);
+}
+
+#btn3:checked ~ .text-wrapper .text-content .move {
+  margin-left: -200%;
+}
+
+#btn4:checked ~ .text-wrapper .text-content {
+  margin-left: -300%;
 }
