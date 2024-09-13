@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  display: flex;
   overflow: hidden;
   background-color: rgb(100, 100, 100);
-  font-size: 0.62rem;
+  font-size: 0.625rem;
   width: 100dvw;
   height: 100dvh;
 }
@@ -14,11 +16,11 @@ body {
 .wrapper {
   display: flex;
   max-width: 102.4rem;
-  height: 100dvh;
   background-color: rgb(100, 100, 100);
   flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .container {
@@ -40,7 +42,6 @@ body {
 
 .slide {
   width: 100%;
- 
 }
 
 input {
@@ -55,20 +56,45 @@ img {
 
 .sidebar {
   display: flex;
-  width: 10rem;
-  height: 2rem;
   justify-content: center;
   align-items: center;
-  align-self: end;
+  order: 1;
 }
 
 .button {
-  height: 1rem;
-  border-radius: 100%;
-  width: 1rem;
-  border: 0.1rem solid white;
+  padding: 1em;
   cursor: pointer;
-  margin-left: 1rem;
+}
+
+span {
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  border: 0.1rem solid lightslategray;
+  padding: 0.5em;
+  background-color: lightslategray;
+}
+
+.button:hover span {
+  background-color: rgb(164, 171, 178); 
+  border: 0.1rem solid  rgb(164, 171, 178);
+}
+
+#btn1:checked ~ .sidebar-wrapper .sidebar .button:hover .b1,
+#btn2:checked ~ .sidebar-wrapper .sidebar .button:hover .b2,
+#btn3:checked ~ .sidebar-wrapper .sidebar .button:hover .b3,
+#btn4:checked ~ .sidebar-wrapper .sidebar .button:hover .b4 {
+  background-color: rgb(100, 100, 100);
+  border: 0.1rem solid rgb(100, 100, 100) 
+}
+
+#btn1:checked ~ .sidebar-wrapper .sidebar .button .b1,
+#btn2:checked ~ .sidebar-wrapper .sidebar .button .b2,
+#btn3:checked ~ .sidebar-wrapper .sidebar .button .b3,
+#btn4:checked ~ .sidebar-wrapper .sidebar .button .b4 {
+  background-color: rgb(100, 100, 100);
+  border: 0.1rem solid white; 
 }
 
 #btn1:checked ~ .container .slider-line {
@@ -89,8 +115,7 @@ img {
 
 .text {
   color: white;
-  font-size: 2rem;
-
+  font-size: 1.5rem;
   width: 100%;
   height: auto;
   padding: 0.5rem;
@@ -105,22 +130,39 @@ img {
 
 .text-wrapper {
   overflow: hidden;
-  width: 25rem;
+  width: 22rem;
   height: 3.5rem;
 }
 
-#btn1:checked ~ .text-wrapper .text-content {
+#btn1:checked ~ .sidebar-wrapper .text-wrapper .text-content {
   margin-left: 0;
 }
 
-#btn2:checked ~ .text-wrapper .text-content {
+#btn2:checked ~ .sidebar-wrapper .text-wrapper .text-content {
   margin-left: -100%;
 }
 
-#btn3:checked ~ .text-wrapper .text-content {
+#btn3:checked ~ .sidebar-wrapper .text-wrapper .text-content {
   margin-left: -200%;
 }
 
-#btn4:checked ~ .text-wrapper .text-content {
+#btn4:checked ~ .sidebar-wrapper .text-wrapper .text-content {
   margin-left: -300%;
+}
+
+.sidebar-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (width < 512px) {
+  .text-wrapper {
+    order: 2;
+  }
+  .sidebar-wrapper {
+    justify-content: center;
+  }
 }
